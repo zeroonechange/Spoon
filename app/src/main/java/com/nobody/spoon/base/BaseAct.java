@@ -13,7 +13,6 @@ import javax.inject.Inject;
 /**
  * Created by zeroones on 2018/3/20.
  */
-
 public abstract class BaseAct<T extends BasePresenter> extends SimpleAct implements BaseView {
 
     @Inject

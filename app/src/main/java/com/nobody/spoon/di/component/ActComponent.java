@@ -1,10 +1,8 @@
 package com.nobody.spoon.di.component;
 
-import android.app.Activity;
-
 import com.nobody.spoon.di.model.ActModule;
 import com.nobody.spoon.di.scope.ActScope;
-import com.nobody.spoon.ui.main.act.MainActivity;
+import com.nobody.spoon.ui._1_main.act.MainActivity;
 
 import dagger.Component;
 
@@ -27,7 +25,5 @@ import dagger.Component;
 @Component(dependencies = AppComponent.class, modules = ActModule.class)
 public interface ActComponent {
 
-    Activity getActivity();
-
-    void injectMainAct(MainActivity mainAct);
+    void injectMainAct(MainActivity mainAct);  // TODO: 2018/3/21  不懂为什么需要用这个来注入
 }

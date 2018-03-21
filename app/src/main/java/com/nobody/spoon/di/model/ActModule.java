@@ -2,10 +2,7 @@ package com.nobody.spoon.di.model;
 
 import android.app.Activity;
 
-import com.nobody.spoon.di.scope.ActScope;
-
 import dagger.Module;
-import dagger.Provides;
 
 /**
  * Created by zeroones on 2018/3/21.
@@ -20,19 +17,11 @@ import dagger.Provides;
 public class ActModule {
     private Activity act;
 
-    // 构造函数用来提供给BaseAct来构造ActComponent的
+    /**
+     * 构造函数用来提供给BaseAct来构造ActComponent的
+     * {@link com.nobody.spoon.base.BaseAct#getActModule() }
+     */
     public ActModule(Activity activity) {
         this.act = activity;
-    }
-
-    /** 这个方法纯粹是因为Dagger2需要  ActComponent有 那么这里也需要
-     * Error:(28, 10) 错误: com.nobody.spoon.presenter.MainPresenter cannot be provided without an @Inject constructor or from an @Provides- or @Produces-annotated method.
-     * com.nobody.spoon.base.BaseAct.mPresenter
-     * [injected field of type: com.nobody.spoon.presenter.MainPresenter mPresenter]
-     */
-    @Provides
-    @ActScope
-    public Activity provideAct() {
-        return act;
     }
 }
