@@ -8,7 +8,7 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by Robin on 2018/3/21.
+ * Created by zeroones on 2018/3/21.
  * well 这个module看起来没啥用  事实上在这里真的没啥用  O(∩_∩)O
  * <p>
  * module一般放一些第三方的  没法依赖注入的  需要直接new的那种东西  比如这里可以放一些和Activity相关的  暂时我也没想出来

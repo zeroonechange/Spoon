@@ -4,7 +4,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
 /**
- * Created by Robin on 2018/3/20.
+ * Created by zeroones on 2018/3/20.
  */
 
 public class RxPresenter<T extends BaseView> implements BasePresenter<T> {

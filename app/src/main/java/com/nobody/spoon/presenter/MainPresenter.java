@@ -6,7 +6,7 @@ import com.nobody.spoon.base.contract.MainContract;
 import javax.inject.Inject;
 
 /**
- * Created by Robin on 2018/3/21.
+ * Created by zeroones on 2018/3/21.
  */
 
 public class MainPresenter extends RxPresenter<MainContract.View> implements MainContract.Presenter {

@@ -11,7 +11,7 @@ import com.nobody.spoon.utils.SnackbarUtil;
 import javax.inject.Inject;
 
 /**
- * Created by Robin on 2018/3/20.
+ * Created by zeroones on 2018/3/20.
  */
 
 public abstract class BaseAct<T extends BasePresenter> extends SimpleAct implements BaseView {
