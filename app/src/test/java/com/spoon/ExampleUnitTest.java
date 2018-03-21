@@ -1,4 +1,4 @@
-package nobody.spoon;
+package com.spoon;
 
 import org.junit.Test;
 
