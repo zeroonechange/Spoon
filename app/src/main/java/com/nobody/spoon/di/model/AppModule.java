@@ -1,7 +1,13 @@
 package com.nobody.spoon.di.model;
 
 import com.nobody.spoon.app.App;
+import com.nobody.spoon.module.DataManager;
+import com.nobody.spoon.module.db.DBHelper;
+import com.nobody.spoon.module.db.RealmHelper;
 import com.nobody.spoon.module.http.HttpHelper;
+import com.nobody.spoon.module.http.RetrofitHelper;
+import com.nobody.spoon.module.pref.ImplPreferencesHelper;
+import com.nobody.spoon.module.pref.PreferencesHelper;
 
 import javax.inject.Singleton;
 
@@ -30,9 +36,26 @@ public class AppModule {
 
     @Provides
     @Singleton
-    HttpHelper providerHttpHelper() {
-        return null;
+    HttpHelper providerHttpHelper(RetrofitHelper helper) {
+        return helper;
     }
 
+    @Provides
+    @Singleton
+    DBHelper provideDBHelper(RealmHelper helper) {
+        return helper;
+    }
+
+    @Provides
+    @Singleton
+    PreferencesHelper providePrefHelper(ImplPreferencesHelper helper) {
+        return helper;
+    }
+
+    @Provides
+    @Singleton
+    DataManager provideDataManager(HttpHelper httpHelper, DBHelper dbHelper, PreferencesHelper preferencesHelper) {
+        return new DataManager(httpHelper, dbHelper, preferencesHelper);
+    }
 
 }

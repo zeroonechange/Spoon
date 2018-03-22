@@ -5,6 +5,8 @@ import android.app.Application;
 
 import com.nobody.spoon.di.component.AppComponent;
 import com.nobody.spoon.di.component.DaggerAppComponent;
+import com.nobody.spoon.di.model.AppModule;
+import com.nobody.spoon.di.model.HttpModule;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -34,6 +36,8 @@ public class App extends Application {
     public static AppComponent getAppComponent() {
         if (appComponent == null) {
             appComponent = DaggerAppComponent.builder()
+                    .appModule(new AppModule(instance))
+                    .httpModule(new HttpModule())
                     .build();
         }
 

@@ -2,7 +2,7 @@ package com.nobody.spoon.base.contract;
 
 import com.nobody.spoon.base.BasePresenter;
 import com.nobody.spoon.base.BaseView;
-import com.nobody.spoon.ui._0_welcome.WelcomeBean;
+import com.nobody.spoon.module.bean.WelcomeBean;
 
 /**
  * Created by Robin on 2018/3/21.
