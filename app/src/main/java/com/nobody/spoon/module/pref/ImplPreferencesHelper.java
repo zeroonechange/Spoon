@@ -10,7 +10,7 @@ import com.nobody.spoon.app.Constants;
 import javax.inject.Inject;
 
 /**
- * Created by Robin on 2018/3/21.
+ * Created by zeroones on 2018/3/21.
  */
 
 public class ImplPreferencesHelper implements PreferencesHelper {
@@ -27,5 +27,15 @@ public class ImplPreferencesHelper implements PreferencesHelper {
     @Override
     public boolean getNoImageState() {
         return mSPrefs.getBoolean(Constants.SP_NO_IMAGE, DEFAULT_NO_IMAGE);
+    }
+
+    @Override
+    public boolean getManagerPoint() {
+        return false;
+    }
+
+    @Override
+    public void setManagerPoint(boolean isFirst) {
+
     }
 }

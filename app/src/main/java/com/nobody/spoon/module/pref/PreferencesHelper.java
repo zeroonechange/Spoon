@@ -1,9 +1,14 @@
 package com.nobody.spoon.module.pref;
 
 /**
- * Created by Robin on 2018/3/21.
+ * Created by zeroones on 2018/3/21.
  */
 
 public interface PreferencesHelper {
     boolean getNoImageState();
+
+    boolean getManagerPoint();
+
+    void setManagerPoint(boolean isFirst);
+
 }

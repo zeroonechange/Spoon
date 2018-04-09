@@ -54,4 +54,25 @@ public abstract class BaseAct<T extends BasePresenter> extends SimpleAct impleme
 
     protected abstract void initInject();
 
+    @Override
+    public void stateError() {
+
+    }
+
+
+    @Override
+    public void stateEmpty() {
+
+    }
+
+    @Override
+    public void stateLoading() {
+
+    }
+
+    @Override
+    public void stateMain() {
+
+    }
+
 }

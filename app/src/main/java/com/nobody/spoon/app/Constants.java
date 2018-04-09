@@ -5,7 +5,7 @@ import android.os.Environment;
 import java.io.File;
 
 /**
- * Created by Robin on 2018/3/21.
+ * Created by zeroones on 2018/3/21.
  */
 
 public class Constants {
@@ -17,4 +17,10 @@ public class Constants {
 
     public static final String PATH_SDCARD = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "codeest" + File.separator + "GeekNews";
 
+
+    public static final String IT_GOLD_TYPE = "gold_type";
+
+    public static final String IT_GOLD_TYPE_STR = "gold_type_str";
+
+    public static final String IT_GOLD_MANAGER = "gold_manager";
 }

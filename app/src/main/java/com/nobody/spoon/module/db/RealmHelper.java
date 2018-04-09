@@ -1,12 +1,14 @@
 package com.nobody.spoon.module.db;
 
+import com.nobody.spoon.module.bean.GoldManagerBean;
+
 import javax.inject.Inject;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
 /**
- * Created by Robin on 2018/3/22.
+ * Created by zeroones on 2018/3/22.
  */
 
 public class RealmHelper implements DBHelper {
@@ -21,5 +23,15 @@ public class RealmHelper implements DBHelper {
                 .deleteRealmIfMigrationNeeded()
                 .name(DB_NAME)
                 .build());
+    }
+
+    @Override
+    public void updateGoldManagerList(GoldManagerBean bean) {
+
+    }
+
+    @Override
+    public GoldManagerBean getGoldManagerList() {
+        return null;
     }
 }

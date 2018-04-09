@@ -15,7 +15,7 @@ import com.nobody.spoon.utils.ImageLoader;
 import butterknife.BindView;
 
 /**
- * Created by Robin on 2018/3/21.
+ * Created by zeroones on 2018/3/21.
  */
 
 public class WelcomeAct extends BaseAct<WelcomePresenter> implements WelcomeContract.View {
@@ -41,10 +41,9 @@ public class WelcomeAct extends BaseAct<WelcomePresenter> implements WelcomeCont
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
-    // 稍会儿测试 如果不inject会怎样
     @Override
     protected void initInject() {
-
+        getActComponent().injectWelcomeAct(this);
     }
 
     @Override

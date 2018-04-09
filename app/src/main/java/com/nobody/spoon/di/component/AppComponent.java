@@ -28,7 +28,7 @@ public interface AppComponent {
 
     RetrofitHelper retrofitHelper();  // 不太清楚
 
-    RealmHelper realmHelper();    // 本地数据库的操作都在这
+    RealmHelper realmHelper();          // 本地数据库的操作都在这
 
-    ImplPreferencesHelper preferencesHelper();  // 这里貌似可以做个工具类
+    ImplPreferencesHelper preferencesHelper();  // 这里貌似可以做个工具类  不用在这里写
 }

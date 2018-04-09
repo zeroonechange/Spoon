@@ -59,6 +59,7 @@ dependencies {
 
 
 //    implementation rootProject.ext.dependencies[""]
+    implementation rootProject.ext.dependencies["logger"]
 
     implementation rootProject.ext.dependencies["fragmentation"]
 }

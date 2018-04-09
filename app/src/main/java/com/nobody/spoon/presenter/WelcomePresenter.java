@@ -3,6 +3,7 @@ package com.nobody.spoon.presenter;
 import com.nobody.spoon.base.RxPresenter;
 import com.nobody.spoon.base.contract.WelcomeContract;
 import com.nobody.spoon.module.DataManager;
+import com.nobody.spoon.module.bean.WelcomeBean;
 import com.nobody.spoon.utils.RxUtil;
 
 import javax.inject.Inject;
@@ -11,7 +12,7 @@ import io.reactivex.Flowable;
 import io.reactivex.functions.Consumer;
 
 /**
- * Created by Robin on 2018/3/21.
+ * Created by zeroones on 2018/3/21.
  */
 
 public class WelcomePresenter extends RxPresenter<WelcomeContract.View> implements WelcomeContract.Presenter {

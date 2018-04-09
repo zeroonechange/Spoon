@@ -11,6 +11,8 @@ import com.nobody.spoon.di.model.HttpModule;
 import java.util.HashSet;
 import java.util.Set;
 
+import io.realm.Realm;
+
 /**
  * Created by zeroones on 2018/3/20.
  */
@@ -26,6 +28,9 @@ public class App extends Application {
         super.onCreate();
 
         instance = this;
+
+        //初始化数据库
+        Realm.init(getApplicationContext());
     }
 
     public static App getInstance() {
@@ -40,7 +45,6 @@ public class App extends Application {
                     .httpModule(new HttpModule())
                     .build();
         }
-
         return appComponent;
     }
 

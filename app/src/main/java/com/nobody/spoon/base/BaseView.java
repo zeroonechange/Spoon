@@ -5,7 +5,18 @@ package com.nobody.spoon.base;
  */
 
 public interface BaseView {
+
     void showError(String msg);
 
     void useNightMode(boolean isNight);
+
+    //=======  State  =======
+    void stateError();
+
+    void stateEmpty();
+
+    void stateLoading();
+
+    void stateMain();
+
 }

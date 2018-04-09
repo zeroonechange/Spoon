@@ -8,14 +8,15 @@ import com.nobody.spoon.module.http.api.VtexApis;
 import com.nobody.spoon.module.http.api.WeChatApis;
 import com.nobody.spoon.module.http.api.ZhihuApis;
 
+import org.reactivestreams.Subscriber;
+
 import javax.inject.Inject;
 
 import io.reactivex.Flowable;
 
 /**
- * Created by Robin on 2018/3/22.
+ * Created by zeroones on 2018/3/22.
  */
-
 public class RetrofitHelper implements HttpHelper {
 
     private ZhihuApis mZhihuApiService;
@@ -39,6 +40,6 @@ public class RetrofitHelper implements HttpHelper {
 
     @Override
     public Flowable<WelcomeBean> fetchWelcomeInfo(String res) {
-        return null;
+        return mZhihuApiService.getWelcomeInfo(res);
     }
 }
