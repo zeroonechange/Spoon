@@ -94,5 +94,4 @@ public class MainActivity extends BaseAct<GoldMainPresenter> implements GoldMain
         intent.putExtra(Constants.IT_GOLD_MANAGER, mBean);
         mContext.startActivity(intent);
     }
-
 }

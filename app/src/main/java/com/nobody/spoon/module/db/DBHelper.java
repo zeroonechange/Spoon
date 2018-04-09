@@ -2,6 +2,7 @@ package com.nobody.spoon.module.db;
 
 
 import com.nobody.spoon.module.bean.GoldManagerBean;
+import com.nobody.spoon.module.bean.RealmLikeBean;
 
 /**
  * @author: Est <codeest.dev@gmail.com>
@@ -25,4 +26,9 @@ public interface DBHelper {
      */
     GoldManagerBean getGoldManagerList();
 
+    boolean queryLikeId(String id);
+
+    void deleteLikeBean(String id);
+
+    void insertLikeBean(RealmLikeBean bean);
 }

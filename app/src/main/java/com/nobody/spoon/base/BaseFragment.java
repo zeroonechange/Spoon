@@ -60,6 +60,11 @@ public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragme
 
     }
 
+    @Override
+    public void stateEmpty() {
+
+    }
+
     protected abstract void initInject();
 
 }

@@ -11,4 +11,5 @@ public interface PreferencesHelper {
 
     void setManagerPoint(boolean isFirst);
 
+    boolean getAutoCacheState();
 }

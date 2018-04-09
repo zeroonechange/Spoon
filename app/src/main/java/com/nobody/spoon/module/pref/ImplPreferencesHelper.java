@@ -15,7 +15,7 @@ import javax.inject.Inject;
 
 public class ImplPreferencesHelper implements PreferencesHelper {
     private static final boolean DEFAULT_NO_IMAGE = false;
-
+    private static final boolean DEFAULT_AUTO_SAVE = true;
     private static final String SHAREDPREFERENCES_NAME = "my_sp";
     private final SharedPreferences mSPrefs;
 
@@ -37,5 +37,10 @@ public class ImplPreferencesHelper implements PreferencesHelper {
     @Override
     public void setManagerPoint(boolean isFirst) {
 
+    }
+
+    @Override
+    public boolean getAutoCacheState() {
+        return mSPrefs.getBoolean(Constants.SP_AUTO_CACHE, DEFAULT_AUTO_SAVE);
     }
 }
